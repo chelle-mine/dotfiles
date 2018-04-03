@@ -1,0 +1,68 @@
+# i3status configuration file.
+# see "man i3status" for documentation.
+
+# It is important that this file is edited as UTF-8.
+# The following line should contain a sharp s:
+# ß
+# If the above line is not correctly displayed, fix your editor first!
+
+general {
+	output_format = "i3bar"
+	separator = ""
+        colors = true
+	color_good = "#FFFFFF"
+	color_degraded = "#6A6A6A"
+	color_bad = "#CC1616"
+        interval = 1
+}
+
+order += "cpu_usage"
+order += "disk /home"
+order += "wireless wlo1"
+order += "battery 0"
+order += "volume master"
+order += "tztime local"
+
+
+battery 0 {
+	align = "center"
+	min_width = 40
+        format = "%status%percentage %remaining"
+	integer_battery_capacity = true
+	last_full_capacity = true
+	path = "/sys/class/power_supply/BAT0/uevent"
+	low_threshold = 30
+	status_full = ""
+	status_chr = ""
+}
+
+cpu_usage {
+	align = "center"
+	min_width = 40
+        format = "CPU %usage"
+}
+
+disk "/home" {
+	align = "center"
+        format = "%avail"
+}
+
+tztime local {
+	align = "center"
+        format = "   %Y-%m-%d %H:%M:%S"
+}
+
+volume master {
+	align = "center"
+	min_width = 40
+	device = "pulse"
+	format = "%volume"
+	format_muted = "(%volume)"
+}
+
+wireless wlo1 {
+	align = "center"
+	min_width = 80
+        format_up = "%essid %quality"
+        format_down = "down"
+}
