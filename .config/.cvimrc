@@ -1,0 +1,10 @@
+let configpath = '/home/michelle/.config/.cvimrc'
+set localconfig
+map J nextTab
+map K previousTab
+unmap d
+map u lastClosedTab
+map <C-d> scrollPageDown
+map <C-u> scrollPageUp
+unmap <C-b>
+map M createBookmark
