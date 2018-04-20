@@ -1,4 +1,14 @@
-URxvt.font: xft:Dina:size=8
+Xft.dpi: 192
+Xft.autohint: 0
+Xft.lcdfilter: lcddefault
+Xft.hinting: 1
+Xft.hintstyle: hintfull
+Xft.antialias: 1
+Xft.rgba: rgb
+
+rofi.dpi: 192
+
+URxvt.font: xft:Monoid:size=8
 URxvt.scrollBar: false
 
 ! special
