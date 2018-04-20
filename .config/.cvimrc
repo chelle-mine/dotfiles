@@ -1,7 +1,8 @@
 let configpath = '/home/michelle/.config/.cvimrc'
 set localconfig
 unmap <C-b>
+unmap <C-d>
 map J nextTab
 map K previousTab
 map X lastClosedTab
-map M createBookMark
+map M createBookmark

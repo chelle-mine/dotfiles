@@ -12,7 +12,7 @@ set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:Dina 8
+font pango:t cherry 13
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -86,7 +86,7 @@ bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
+bindsym $mod+t layout tabbed
 bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
@@ -99,7 +99,7 @@ bindsym $mod+space focus mode_toggle
 bindsym $mod+a focus parent
 
 # focus the child container
-#bindsym $mod+d focus child
+bindsym $mod+Shift+a focus child
 
 # move the currently focused window to the scratchpad
 bindsym $mod+Shift+minus move scratchpad
@@ -184,24 +184,39 @@ default_border normal 1
 default_floating_border normal 1
 
 # Colors
-set $text #ffffff
-set $inactive_text #808080
+set $title #ffffff
+set $dk_title #7e705a
 set $border #7e705a
-set $unfocused_border #8e8e9f
+set $dk_border #231c14
 set $backgr #231c14
+set $dk_bg  #000000
 set $indicator #8a5162
-# class                 border  backgr. text    indicator child_border
-client.focused          $border $border $text   $border   $border
-client.focused_inactive $backgr $backgr $inactive_text   $backgr   $backgr
-client.unfocused        $backgr $backgr $inactive_text #292d2e   #222222
-client.urgent           #2f343a #900000 $text   #900000   #900000
-client.placeholder      #000000 #0c0c0c $text   #000000   #0c0c0c
+# class                 border     backgr. text      indicator child_border
+client.focused          $border    $border $title    $border   $border
+client.focused_inactive $dk_border $dk_bg  $dk_title $backgr   $dk_border
+client.unfocused        $dk_border $dk_bg  $dk_title #292d2e   #222222
+client.urgent           #2f343a    #900000 $title    #900000   #900000
+client.placeholder      #000000    #0c0c0c $title    #000000   #0c0c0c
 client.background       #ffffff
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-	font pango: Dina, Font Awesome 8
-        status_command i3status
+    status_command i3status
+    colors {
+        background $backgr
+        #focused_background inherits background
+        statusline $title
+        #focused_statusline inherits statusline
+        separator $border
+        #focused_separator inherits separator
+        #
+        # class            border  backgr  text
+        focused_workspace  $border $border $title
+        #active_workspace inherits focused_workspace
+        inactive_workspace $backgr $backgr $dk_title
+        urgent_workspace   $border $backgr $title
+        #binding_mode inherits urgent_workspace
+    }
 }
 
