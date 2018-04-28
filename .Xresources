@@ -1,48 +1,51 @@
 !URxvt.font: -windows-proggycleanszcp-medium-r-normal--13-80-96-96-c-70-iso8859-1
 !URxvt.font: xft:Dina:size=8
-!URxvt.font: xft:ypn envypn:pixelsize=13
-URxvt.font: xft:t cherry:pixelsize=13
+!URxvt.font: xft:lucy tewi2a:size=11
+!URxvt.font: xft:ypn envypn:size=13
+!URxvt.font: xft:t cherry:pixelsize=13
+!URxvt.font: xft:maraschino:pixelsize=13 
+URxvt.font: xft:umeboshi:pixelsize=11
 ! Peep renders rather large on 1920x1080
 !URxvt.font: -zevv-peep-medium-r-normal--14-130-75-75-c-70-iso8859-15
 
 URxvt.scrollBar: false
 
 ! special
-*.foreground:   #d0c8c6
-*.background:   #231c14
-*.cursorColor:  #d0c8c6
+*.foreground:   rgb:d0/c8/c6
+*.background:   rgb:23/1c/14
+*.cursorColor:  rgb:d0/c8/c6
 
 ! black
-*.color0:       #231c14
-*.color8:       #7e705a
+*.color0:       rgb:23/1c/14
+*.color8:       rgb:7e/70/5a
 
 ! red
-*.color1:       #cb6077
-*.color9:       #cb6077
+*.color1:       rgb:cb/60/77
+*.color9:       rgb:cb/60/77
 
 ! green
-*.color2:       #beb55b
-*.color10:      #beb55b
+*.color2:       rgb:be/b5/5b
+*.color10:      rgb:be/b5/5b
 
 ! yellow
-*.color3:       #f4bc87
-*.color11:      #f4bc87
+*.color3:       rgb:f4/bc/87
+*.color11:      rgb:f4/bc/87
 
 ! blue
-*.color4:       #8ab3b5
-*.color12:      #8ab3b5
+*.color4:       rgb:8a/b3/b5
+*.color12:      rgb:8a/b3/b5
 
 ! magenta
-*.color5:       #a89bb9
-*.color13:      #a89bb9
+*.color5:       rgb:a8/9b/b9
+*.color13:      rgb:a8/9b/b9
 
 ! cyan
-*.color6:       #7bbda4
-*.color14:      #7bbda4
+*.color6:       rgb:7b/bd/a4
+*.color14:      rgb:7b/bd/a4
 
 ! white
-*.color7:       #d0c8c6
-*.color15:      #f5eeeb
+*.color7:       rgb:d0/c8/c6
+*.color15:      rgb:f5/ee/eb
 
 URxvt.perl-ext-common: fullscreen
 URxvt.keysym.F11: perl:fullscreen:switch
