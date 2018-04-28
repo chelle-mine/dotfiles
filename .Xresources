@@ -1,9 +1,11 @@
+Xft.dpi: 196
 !URxvt.font: -windows-proggycleanszcp-medium-r-normal--13-80-96-96-c-70-iso8859-1
 !URxvt.font: xft:Dina:size=8
 !URxvt.font: xft:ypn envypn:pixelsize=13
-URxvt.font: xft:t cherry:pixelsize=13
+!URxvt.font: xft: cherry:pixelsize=11
 ! Peep renders rather large on 1920x1080
 !URxvt.font: -zevv-peep-medium-r-normal--14-130-75-75-c-70-iso8859-15
+URxvt.font: xft:Monoid:style=Retina:size=7
 
 URxvt.scrollBar: false
 
